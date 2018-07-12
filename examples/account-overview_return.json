@@ -1,0 +1,13 @@
+{"12345678": {
+   "a_user": {
+      "Busy": 0, 
+      "Call placement error": 0, 
+      "Fax transmission failed": 0, 
+      "No answer": 0, 
+      "No dial tone": 0, 
+      "Unspecified failure": 0, 
+      "Success": 3, 
+      "Total": 3, 
+      "Failures": 0}
+   }
+}

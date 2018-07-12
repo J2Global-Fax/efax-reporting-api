@@ -1,0 +1,60 @@
+{
+  "<DID 1>": {
+    "user_1": {
+      "<recipient fax #1>": {
+        "Busy": 0,
+        "Call placement error": 0,
+        "Fax transmission failed": 0,
+        "No answer": 1,
+        "No dial tone": 0,
+        "Unspecified failure": 0,
+        "Success": 0,
+        "Total": 1
+      },
+      "<recipient fax #2>": {
+        "Busy": 0,
+        "Call placement error": 0,
+        "Fax transmission failed": 0,
+        "No answer": 1,
+        "No dial tone": 0,
+        "Unspecified failure": 0,
+        "Success": 0,
+        "Total": 1
+      }
+    }
+  },
+  "<DID 2>": {
+    "user_2": {
+      "<recipient fax #3>": {
+        "Busy": 0,
+        "Call placement error": 0,
+        "Fax transmission failed": 2,
+        "No answer": 0,
+        "No dial tone": 0,
+        "Unspecified failure": 0,
+        "Success": 0,
+        "Total": 2
+      },
+      "<recipient fax #4>": {
+        "Busy": 0,
+        "Call placement error": 0,
+        "Fax transmission failed": 0,
+        "No answer": 1,
+        "No dial tone": 0,
+        "Unspecified failure": 0,
+        "Success": 0,
+        "Total": 1
+      },
+      "<recipient fax #5>": {
+        "Busy": 0,
+        "Call placement error": 0,
+        "Fax transmission failed": 0,
+        "No answer": 3,
+        "No dial tone": 0,
+        "Unspecified failure": 0,
+        "Success": 0,
+        "Total": 3
+      }
+    }
+  }
+}
