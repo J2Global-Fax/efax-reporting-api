@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2018-07-12T17:35:30Z",
+    "version": "2018-07-19T21:44:49Z",
     "title": "eFax Developer Reporting API"
   },
   "host": "api.secure.efaxdeveloper.com",
@@ -34,6 +34,46 @@
             "name": "efax-password",
             "in": "header",
             "description": "efax developer password",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/billable-pages/{date}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "efax-username",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "efax-password",
+            "in": "header",
             "required": true,
             "type": "string"
           }

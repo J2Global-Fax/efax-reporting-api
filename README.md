@@ -2,13 +2,15 @@
 
 ## Reporting API for efax Developer
 
-This API provides 3 different reports for efax Developer Customers:
+This API provides 4 different reports for efax Developer Customers:
 
 * Account Overview - Provides the failure reasons and counts for DID / Usernames for a specific account
 
 * Number Overview - Provides the failure reasons and counts for DID / Usernames / Destination Numbers for an account for every combination that had at least one failure.
 
-* failures - Provides the failure reasons and counts for DID / Usernames /Destination Numbers for an account in which every attempt during a certain day failed.  These are users who were unable to send a successful fax to a specific number on a given day.
+* Failures - Provides the failure reasons and counts for DID / Usernames /Destination Numbers for an account in which every attempt during a certain day failed.  These are users who were unable to send a successful fax to a specific number on a given day.
+
+* Billable Pages - Pages sent by DID and account. 
 
 ## Access
 
@@ -18,13 +20,15 @@ All access requires an eFax Developer account and an API token.  Contact your sa
 
 The API is documented via [swagger](swagger/eFaxDeveloperReportingAPI.json) and [html](docs/index.html)
 
-There are three methods, each of which requires a date parameter in YYYY-MM-DD form:
+There are four methods, each of which requires a date parameter in YYYY-MM-DD form:
 
 * /account-overview/YYYY-MM-DD
 
 * /number-overview/YYYY-MM-DD
 
 * /failures/YYYY-MM-DD
+
+* /billable-pages/YYYY-MM-DD
 
 Every request requires 3 headers:
 
