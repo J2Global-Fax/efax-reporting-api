@@ -720,6 +720,9 @@ margin-bottom: 20px;
                     <li data-group="Default" data-name="accountOverviewDateGet" class="">
                       <a href="#api-Default-accountOverviewDateGet">accountOverviewDateGet</a>
                     </li>
+                    <li data-group="Default" data-name="billablePagesDateGet" class="">
+                      <a href="#api-Default-billablePagesDateGet">billablePagesDateGet</a>
+                    </li>
                     <li data-group="Default" data-name="failuresDateGet" class="">
                       <a href="#api-Default-failuresDateGet">failuresDateGet</a>
                     </li>
@@ -739,10 +742,6 @@ margin-bottom: 20px;
         <div id="header">
           <div id="api-_">
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
-            <hr>
-            <div>
-This is API provides access to reporting for the eFax Developer platform</div>
-          </div>
         </div>
         <div id="sections">
                 <section id="api-Default">
@@ -1149,7 +1148,401 @@ except ApiException as e:
 
                         </article>
                       </div>
-                                          <hr>
+                      <hr>
+                    <div id="api-Default-billablePagesDateGet">
+                      <article id="api-Default-billablePagesDateGet-0" data-group="User" data-name="billablePagesDateGet" data-version="0">
+                        <div class="pull-left">
+                          <h1>billablePagesDateGet</h1>
+                          <p></p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/billable-pages/{date}</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Default-billablePagesDateGet-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Default-billablePagesDateGet-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Default-billablePagesDateGet-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Default-billablePagesDateGet-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Default-billablePagesDateGet-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Default-billablePagesDateGet-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Default-billablePagesDateGet-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Default-billablePagesDateGet-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Default-billablePagesDateGet-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Default-billablePagesDateGet-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Default-billablePagesDateGet-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Default-billablePagesDateGet-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET -H "x-api-key: [[apiKey]]" "https://api.secure.efaxdeveloper.com/v1/billable-pages/{date}"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        
+        // Configure API key authorization: api_key
+        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+        api_key.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //api_key.setApiKeyPrefix("Token");
+
+        DefaultApi apiInstance = new DefaultApi();
+        String efaxUsername = efaxUsername_example; // String | 
+        String date = date_example; // String | 
+        String efaxPassword = efaxPassword_example; // String | 
+        try {
+            Empty result = apiInstance.billablePagesDateGet(efaxUsername, date, efaxPassword);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#billablePagesDateGet");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DefaultApi;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        DefaultApi apiInstance = new DefaultApi();
+        String efaxUsername = efaxUsername_example; // String | 
+        String date = date_example; // String | 
+        String efaxPassword = efaxPassword_example; // String | 
+        try {
+            Empty result = apiInstance.billablePagesDateGet(efaxUsername, date, efaxPassword);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#billablePagesDateGet");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: api_key)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"x-api-key"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"x-api-key"];
+
+String *efaxUsername = efaxUsername_example; // 
+String *date = date_example; // 
+String *efaxPassword = efaxPassword_example; // 
+
+DefaultApi *apiInstance = [[DefaultApi alloc] init];
+
+[apiInstance billablePagesDateGetWith:efaxUsername
+    date:date
+    efaxPassword:efaxPassword
+              completionHandler: ^(Empty output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var EFaxDeveloperReportingApi = require('e_fax_developer_reporting_api');
+var defaultClient = EFaxDeveloperReportingApi.ApiClient.instance;
+
+// Configure API key authorization: api_key
+var api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.apiKeyPrefix['x-api-key'] = "Token"
+
+var api = new EFaxDeveloperReportingApi.DefaultApi()
+
+var efaxUsername = efaxUsername_example; // {String} 
+
+var date = date_example; // {String} 
+
+var efaxPassword = efaxPassword_example; // {String} 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.billablePagesDateGet(efaxUsername, date, efaxPassword, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Default-billablePagesDateGet-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class billablePagesDateGetExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: api_key
+            Configuration.Default.ApiKey.Add("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("x-api-key", "Bearer");
+
+            var apiInstance = new DefaultApi();
+            var efaxUsername = efaxUsername_example;  // String | 
+            var date = date_example;  // String | 
+            var efaxPassword = efaxPassword_example;  // String | 
+
+            try
+            {
+                Empty result = apiInstance.billablePagesDateGet(efaxUsername, date, efaxPassword);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DefaultApi.billablePagesDateGet: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\DefaultApi();
+$efaxUsername = efaxUsername_example; // String | 
+$date = date_example; // String | 
+$efaxPassword = efaxPassword_example; // String | 
+
+try {
+    $result = $api_instance->billablePagesDateGet($efaxUsername, $date, $efaxPassword);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->billablePagesDateGet: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::DefaultApi;
+
+# Configure API key authorization: api_key
+$WWW::SwaggerClient::Configuration::api_key->{'x-api-key'} = 'YOUR_API_KEY';
+# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$WWW::SwaggerClient::Configuration::api_key_prefix->{'x-api-key'} = "Bearer";
+
+my $api_instance = WWW::SwaggerClient::DefaultApi->new();
+my $efaxUsername = efaxUsername_example; # String | 
+my $date = date_example; # String | 
+my $efaxPassword = efaxPassword_example; # String | 
+
+eval { 
+    my $result = $api_instance->billablePagesDateGet(efaxUsername => $efaxUsername, date => $date, efaxPassword => $efaxPassword);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling DefaultApi->billablePagesDateGet: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Default-billablePagesDateGet-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+swagger_client.configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['x-api-key'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.DefaultApi()
+efaxUsername = efaxUsername_example # String | 
+date = date_example # String | 
+efaxPassword = efaxPassword_example # String | 
+
+try: 
+    api_response = api_instance.billable_pages_date_get(efaxUsername, date, efaxPassword)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->billablePagesDateGet: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">date*</td>
+<td>
+
+
+    <div id="d2e199_billablePagesDateGet_date">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
+
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">efax-username*</td>
+<td>
+
+
+    <div id="d2e199_billablePagesDateGet_efaxUsername">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">efax-password*</td>
+<td>
+
+
+    <div id="d2e199_billablePagesDateGet_efaxPassword">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - 200 response </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-billablePagesDateGet-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-billablePagesDateGet-200-schema">
+                                  <div id='responses-billablePagesDateGet-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "200 response",
+  "schema" : {
+    "$ref" : "#/definitions/Empty"
+  }
+};
+                                        var schema = schemaWrapper.schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.definitions = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-billablePagesDateGet-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-billablePagesDateGet-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-billablePagesDateGet-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-Default-failuresDateGet">
                       <article id="api-Default-failuresDateGet-0" data-group="User" data-name="failuresDateGet" data-version="0">
                         <div class="pull-left">
@@ -1960,12 +2353,11 @@ except ApiException as e:
           </div>
           <div id="footer">
             <div id="api-_footer">
-                <div class="license-info">All rights reserved</div>
             </div>
           </div>
           <div id="generator">
             <div class="content">
-              Generated 2018-07-19T15:40:35.226-07:00
+              Generated 2018-07-25T14:17:48.174-07:00
             </div>
           </div>
       </div>
