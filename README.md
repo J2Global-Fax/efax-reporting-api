@@ -18,13 +18,15 @@ All access requires an eFax Developer account and an API token.  Contact your sa
 
 The API is documented via [swagger](swagger/eFaxDeveloperReportingAPI.json) and [html](docs/index.html)
 
-There are three methods, each of which requires a date parameter in YYYY-MM-DD form:
+There are four methods, each of which requires a date parameter in YYYY-MM-DD form:
 
 * /account-overview/YYYY-MM-DD
 
 * /number-overview/YYYY-MM-DD
 
 * /failures/YYYY-MM-DD
+
+* /billable-pages/YYYY-MM-DD
 
 Every request requires 3 headers:
 

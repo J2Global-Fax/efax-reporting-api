@@ -1,0 +1,13 @@
+"<DID>": {
+    "outbound": {
+      "STANDARD": 78,
+      "FINE" : 24
+    },
+    "inbound": 116
+  },
+"<DID_2>": {
+    "outbound": {
+      "STANDARD": 43
+    },
+    "inbound": 1315
+}
