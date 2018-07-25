@@ -10,8 +10,6 @@ This API provides 4 different reports for efax Developer Customers:
 
 * Failures - Provides the failure reasons and counts for DID / Usernames /Destination Numbers for an account in which every attempt during a certain day failed.  These are users who were unable to send a successful fax to a specific number on a given day.
 
-* Billable Pages - Pages sent by DID and account. 
-
 ## Access
 
 All access requires an eFax Developer account and an API token.  Contact your sales rep to get registered for a token.
@@ -29,7 +27,6 @@ There are four methods, each of which requires a date parameter in YYYY-MM-DD fo
 * /failures/YYYY-MM-DD
 
 * /billable-pages/YYYY-MM-DD
-
 
 Every request requires 3 headers:
 
