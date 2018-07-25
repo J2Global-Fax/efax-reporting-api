@@ -1,12 +1,13 @@
-{
-   "<DID>": 
-      {"user_1": 
-         {"FINE": 120}
-      }, 
-   "<DID_2>": 
-      {"vnacare": 
-         {"FINE": 1234}
-      }
+"<DID>": {
+    "outbound": {
+      "STANDARD": 78,
+      "FINE" : 24
+    },
+    "inbound": 116
+  },
+"<DID_2>": {
+    "outbound": {
+      "STANDARD": 43
+    },
+    "inbound": 1315
 }
-
-

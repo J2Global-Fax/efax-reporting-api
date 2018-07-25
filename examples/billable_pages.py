@@ -21,7 +21,6 @@ print(r.json())
 parsed_json = json.loads(r.json())
 
 for did in parsed_json:
-   for username in parsed_json[did]:
-      print("for DID: {} and user {} on {}:".format(did, username, args.date))
-      for resolution in parsed_json[did][username]:
-         print("  Resolution: {}".format(parsed_json[did][username][resolution]))
+      for resolution in parsed_json[did]['outbound']:
+         print("Outgoing for DID {} and resolution {}:  {}:".format(did, resolution, parsed_json[did]['outbound'][resolution]))
+      print("Incoming for DID {}: {}".format(did, parsed_json[did]['inbound']))

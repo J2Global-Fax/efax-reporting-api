@@ -30,6 +30,7 @@ There are four methods, each of which requires a date parameter in YYYY-MM-DD fo
 
 * /billable-pages/YYYY-MM-DD
 
+
 Every request requires 3 headers:
 
 * x-api-key : API key provided to you.
